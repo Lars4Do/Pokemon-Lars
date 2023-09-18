@@ -13,4 +13,10 @@ open class Pokemon (
     var spezialAngriff: Int,
     var spezialverteidigung: Int,
     var initiative: Int){
+
+    override fun toString(): String {
+        return "${this.name}, ${this.typ}, ${this.level}, ${this.item}, ${this.fähigkeit}, ${this.attacke}" +
+                "${this.kp}, ${this.angriff}, ${this.verteidigung}, ${this.spezialAngriff}" +
+                "${this.spezialverteidigung}, ${this.initiative}"
+    }
 }
