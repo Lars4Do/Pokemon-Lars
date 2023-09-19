@@ -8,7 +8,7 @@ class Zapdos():Pokemon(
     50,
     "Tsitrubeere",
     "Statik",
-    mutableListOf("Donner", "Orkan", "hitzewelle", "Ruheort"),
+    mutableListOf("Donner", "Orkan", "Hitzewelle", "Ruheort"),
     197,
     156,
     150,

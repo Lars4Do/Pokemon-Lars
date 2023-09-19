@@ -15,8 +15,14 @@ open class Pokemon (
     var initiative: Int){
 
     override fun toString(): String {
-        return "${this.name}, ${this.typ}, ${this.level}, ${this.item}, ${this.fähigkeit}, ${this.attacke}" +
-                "${this.kp}, ${this.angriff}, ${this.verteidigung}, ${this.spezialAngriff}" +
+        var uebersicht: String = "${this.name}, ${this.typ}, ${this.level}, ${this.item}, ${this.fähigkeit}, ${this.attacke}" +
+                "${this.kp}, ${this.angriff}, ${this.verteidigung}, ${this.spezialAngriff}," +
                 "${this.spezialverteidigung}, ${this.initiative}"
+
+
+
+        return "${this.name} vom Typ ${this.typ}." +
+                "Es hat die Fähigkeit ${this.fähigkeit} und trägt das Item ${this.item}." +
+                "Seine Angriffe sind ${this.attacke}."
     }
 }
