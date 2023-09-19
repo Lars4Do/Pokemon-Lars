@@ -1,51 +1,57 @@
 package PokemonKlassen
 
-fun teamBisaflor(){
+fun teamBisaflor():MutableList<Pokemon>{
 
     val bisaflor = Bisaflor()
     val kokowei = Kokowei()
     val elezard = Elezard()
     val groudon = Groudon()
-    var Team3 = mutableListOf(bisaflor, kokowei, elezard, groudon)
+    var team3 = mutableListOf(bisaflor, kokowei, elezard, groudon)
 
-    return println("$bisaflor \n$kokowei \n$elezard \n$groudon")
+    println("$bisaflor \n$kokowei \n$elezard \n$groudon")
+
+    return team3
 }
 
 
-fun teamGlurak() {
+fun teamGlurak() :MutableList<Pokemon>{
     val glurak = Glurak()
     val entei = Entei()
     val elfun = Elfun()
     val qurtel = Qurtel()
-    var Team1 = mutableListOf(glurak, entei, qurtel, elfun)
+    var team1 = mutableListOf(glurak, entei, qurtel, elfun)
 
-    return println("$glurak \n$entei \n$elfun \n$qurtel")
+    println("$glurak \n$entei \n$elfun \n$qurtel")
+
+    return team1
 }
 
 
 
-fun teamTurtok() {
+fun teamTurtok() :MutableList<Pokemon>{
     val turtok = Turtok()
     val pelipper = Pelipper()
     val seedraking = Seedraking()
     val zapdos = Zapdos()
-    var Team2 = mutableListOf(turtok, pelipper, seedraking, zapdos)
+    var team2 = mutableListOf(turtok, pelipper, seedraking, zapdos)
 
-    return println("$turtok \n$pelipper \n$seedraking \n$zapdos")
+    println("$turtok \n$pelipper \n$seedraking \n$zapdos")
+
+    return team2
 }
 
 
 
 fun teamInformation(){
     println("Das erste Team besteht aus:")
-    teamGlurak()
+    teamTurtok()
     println("Es ist ein Sonnentag-Team.")
 
 
     readln()
 
     println("Das zweite Team besteht aus:")
-    teamTurtok()
+    teamGlurak()
     println("Es ist ein Regentanz-Team.")
 
 

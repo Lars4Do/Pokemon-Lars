@@ -4,6 +4,10 @@ import PokemonKlassen.*
 fun main(){
 
    teamInformation()
+   readln()
+   teamAuswahlSpieler1()
+   readln()
+   teamAuswahlSpieler2()
 
 }
 
