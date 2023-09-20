@@ -4,7 +4,8 @@ import PokemonKlassen.Pokemon
 
 class Elezard():Pokemon(
     "Elezard",
-    mutableListOf("Normal", "Elektro"),
+    PokemonTyp.NORMAL,
+    PokemonTyp.ELEKTRO,
     50,
     "Heißbrocken",
     "Solarkraft",

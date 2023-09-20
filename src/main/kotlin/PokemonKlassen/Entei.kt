@@ -2,7 +2,8 @@ package PokemonKlassen
 
 class Entei():Pokemon(
     "Entei",
-    mutableListOf("Feuer"),
+    PokemonTyp.FEUER,
+    null,
     50,
     "Überreste",
     "Feuerfänger",

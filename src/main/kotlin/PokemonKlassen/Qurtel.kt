@@ -2,7 +2,8 @@ package PokemonKlassen
 
 class Qurtel():Pokemon(
     "Qurtel",
-    mutableListOf("Feuer"),
+    PokemonTyp.FEUER,
+    null,
     50,
     "Heißbrocken",
     "Dürre",

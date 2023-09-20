@@ -2,7 +2,8 @@ package PokemonKlassen
 
 class Elfun():Pokemon(
     "Elfun",
-    mutableListOf("Pflanze", "Fee"),
+    PokemonTyp.PFLANZE,
+    PokemonTyp.FEE,
     50,
     "Fokusgurt",
     "Strolch",

@@ -4,7 +4,8 @@ import PokemonKlassen.Pokemon
 
 class Zapdos():Pokemon(
     "Zapdos",
-    mutableListOf("Elektro", "Flug"),
+    PokemonTyp.ELEKTRO,
+    PokemonTyp.FLUG,
     50,
     "Tsitrubeere",
     "Statik",

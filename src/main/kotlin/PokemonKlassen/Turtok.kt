@@ -4,7 +4,8 @@ import PokemonKlassen.Pokemon
 
 class Turtok ():Pokemon(
     "Turtok",
-    mutableListOf("Wasser"),
+    PokemonTyp.WASSER,
+    null,
     50,
     "Überreste",
     "Regengenuss",

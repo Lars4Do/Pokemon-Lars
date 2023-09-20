@@ -2,7 +2,8 @@ package PokemonKlassen
 
 class Glurak():Pokemon(
     "Glurak",
-    mutableListOf("Flug", "Feuer"),
+    PokemonTyp.FLUG,
+    PokemonTyp.FEUER,
     50,
     "Leben-Orb",
     "Solarkraft",

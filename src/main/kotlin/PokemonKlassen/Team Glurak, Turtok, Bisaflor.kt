@@ -19,7 +19,7 @@ fun teamGlurak() :MutableList<Pokemon>{
     val entei = Entei()
     val elfun = Elfun()
     val qurtel = Qurtel()
-    var team1 = mutableListOf(glurak, entei, qurtel, elfun)
+    val team1 = mutableListOf(glurak, entei, qurtel, elfun)
 
     println("$glurak \n$entei \n$elfun \n$qurtel")
 

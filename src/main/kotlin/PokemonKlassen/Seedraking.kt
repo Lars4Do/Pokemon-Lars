@@ -4,7 +4,8 @@ import PokemonKlassen.Pokemon
 
 class Seedraking():Pokemon(
     "Seedraking",
-    mutableListOf("Drache, Wasser"),
+    PokemonTyp.DRACHE,
+    PokemonTyp.WASSER,
     50,
     "Leben-Orb",
     "Wassertempo",

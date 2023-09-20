@@ -4,7 +4,8 @@ import PokemonKlassen.Pokemon
 
 class Groudon():Pokemon(
     "Groudon",
-    mutableListOf("Boden"),
+    PokemonTyp.BODEN,
+    null,
     50,
     "Überreste",
     "Dürre",

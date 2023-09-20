@@ -4,7 +4,8 @@ import PokemonKlassen.Pokemon
 
 class Kokowei():Pokemon(
     "Kokowei",
-    mutableListOf("Pflanze", "Psycho"),
+    PokemonTyp.PFLANZE,
+    PokemonTyp.PSYCHO,
     50,
     "Überreste",
     "Chlorophyll",

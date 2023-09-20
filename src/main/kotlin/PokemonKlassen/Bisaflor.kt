@@ -4,7 +4,8 @@ import PokemonKlassen.Pokemon
 
 class Bisaflor():Pokemon(
     "Bisaflor",
-    mutableListOf("Pflanze", "Gift"),
+    PokemonTyp.PFLANZE,
+    PokemonTyp.GIFT,
     50,
     "Leben-Orb",
     "Chlorophyll",

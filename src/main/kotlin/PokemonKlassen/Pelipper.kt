@@ -4,7 +4,8 @@ import PokemonKlassen.Pokemon
 
 class Pelipper ():Pokemon(
     "Pelipper",
-    mutableListOf("Wasser", "Flug"),
+    PokemonTyp.WASSER,
+    PokemonTyp.FLUG,
     50,
     "Nassbrocken",
     "Niesel",
