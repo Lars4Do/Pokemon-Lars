@@ -9,7 +9,7 @@ class Elezard():Pokemon(
     50,
     "Heißbrocken",
     "Solarkraft",
-    mutableListOf("Drachenpuls", "Sonnentag", "Donnerblitz", "Wetterball"),
+    mutableListOf("Drachenpuls", "Sonnentag", "Donnerblitz", "Meteorologe"),
     169,
     117,
     114,

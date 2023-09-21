@@ -9,7 +9,7 @@ open class Pokemon (
     val level: Int,
     var item: String,
     var fähigkeit: String,
-    var attacke: MutableList<String>,
+    var attacke: MutableList<PokemonAttacke>,
     var kp: Int,
     var angriff: Int,
     var verteidigung: Int,

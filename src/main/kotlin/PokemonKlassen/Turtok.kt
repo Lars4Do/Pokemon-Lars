@@ -9,7 +9,7 @@ class Turtok ():Pokemon(
     50,
     "Überreste",
     "Regengenuss",
-    mutableListOf("Hydropumpe","Eisstrahl", "Hausbruch", "Schutzschild"),
+    mutableListOf(PokemonAttacke.Hydropumpe, PokemonAttacke.Eisstrahl, PokemonAttacke.Hausbruch, PokemonAttacke.Regentanz),
     186,
     148,
     167,
@@ -17,3 +17,5 @@ class Turtok ():Pokemon(
     172,
     143){
 }
+
+

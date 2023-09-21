@@ -7,7 +7,7 @@ class Elfun():Pokemon(
     50,
     "Fokusgurt",
     "Strolch",
-    mutableListOf("Rückenwind"),
+    mutableListOf("Rückenwind", "Solarstrahl", "Mondgewalt", "Schutzschild"),
     167,
     130,
     150,

@@ -1,3 +1,4 @@
+import PokemonKlassen.Pokemon
 import PokemonKlassen.PokemonAttacke
 
 enum class PokemonTyp {
@@ -387,63 +388,7 @@ val multiplikatoren = mapOf(
 
 
 
-/*
-Diese Funktion sucht den Schadensmultiplikator aus der "multiplikatoren.
-Bei einem Gegner mit zwei Typen werden die Schadensmultiplikatoren auch direkt miteinander verrechnet.
-*/
 
-
-fun damage(meinAngriff: PokemonTyp, gegnerPokemon: Pair<PokemonTyp, PokemonTyp?>): Double? {
-    val innerKey1 = gegnerPokemon.first
-    val innerKey2 = gegnerPokemon.second
-
-    val outerMap = multiplikatoren[meinAngriff]
-
-    if (outerMap != null) {
-        val schadenMultiplikator1 = outerMap[innerKey1]
-
-        if (schadenMultiplikator1 != null) {
-            val schadenMultiplikator2 = innerKey2?.let { outerMap[it] }
-
-            if (schadenMultiplikator2 != null) {
-                // Multipliziere die beiden Schadensmultiplikatoren
-                val schaden = schadenMultiplikator1 * schadenMultiplikator2
-                return schaden
-            }
-        }
-    }
-
-    // Wenn einer der Schadensmultiplikatoren nicht gefunden wurde, wird null zurückgegeben
-    return null
-}
-
-
-
-/*
-In dieser Funktion werden die Werte meines und des Gegner_Pokemon verrechnet.
-Das ganze wird mit dem Schadenswert der Attacke multipliziert.
- */
-fun verrechnung(meinAngriff: Int, gegnerVerteidigung: Int, schadensWertAttacke: Int): Int {
-    val schaden = (meinAngriff / gegnerVerteidigung) * schadensWertAttacke
-
-
-    return schaden
-}
-fun effektivitaet(): Double?{
-    val schaden = verrechnung(100, 50, 110)
-
-    println("Der Schaden beträgt: $schaden")
-
-    val multiplikator = damage(PokemonTyp.GESTEIN, Pair(PokemonTyp.GESTEIN, PokemonTyp.PSYCHO))
-
-    println("Der Multiplikator beträgt $multiplikator")
-
-    val effektivitaet = multiplikator?.times(schaden)
-
-    println("Der Schaden des Angriffs beträgt $effektivitaet")
-
-    return effektivitaet
-}
 
 
 
