@@ -67,7 +67,7 @@ val multiplikatoren = mapOf(
         PokemonTyp.FEUER to 2.0,
         PokemonTyp.WASSER to 0.5,
         PokemonTyp.PFLANZE to 0.5,
-        PokemonTyp.ELEKTRO to 0.5,
+        PokemonTyp.ELEKTRO to 1.0,
         PokemonTyp.EIS to 0.5,
         PokemonTyp.GESTEIN to 2.0,
         PokemonTyp.FEE to 1.0,

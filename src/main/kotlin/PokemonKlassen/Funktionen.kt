@@ -1,31 +1,33 @@
 package PokemonKlassen
-
-import PokemonTyp
 import multiplikatoren
+
+
 
 /*
 Diese Funktion sucht den Schadensmultiplikator aus der "multiplikatoren".
 Bei einem Gegner mit zwei Typen werden die Schadensmultiplikatoren auch direkt miteinander verrechnet.
 */
 
-
-fun damage(meinAngriff: PokemonAttacke, gegnerPokemon: Pair<PokemonTyp, PokemonTyp?>): Double? {
-    val innerKey1 = gegnerPokemon.first
-    val innerKey2 = gegnerPokemon.second
+fun typenMultiplikator(meinAngriff: PokemonAttacke, gegnerPokemon: Pokemon): Double? {
+    val innerKey1 = gegnerPokemon.typ1
+    val innerKey2 = gegnerPokemon.typ2
 
     val outerMap = multiplikatoren[meinAngriff.typ]
 
     if (outerMap != null) {
         val schadenMultiplikator1 = outerMap[innerKey1]
-
-        if (schadenMultiplikator1 != null) {
-            val schadenMultiplikator2 = innerKey2?.let { outerMap[it] }
+        // TODO prüfe schadenMultiplikator1 != null
+        if (innerKey2 != null) {
+            val schadenMultiplikator2 = outerMap[innerKey2]
 
             if (schadenMultiplikator2 != null) {
                 // Multipliziere die beiden Schadensmultiplikatoren
-                val schaden = schadenMultiplikator1 * schadenMultiplikator2
+                val schaden = schadenMultiplikator1?.times(schadenMultiplikator2)
                 return schaden
             }
+        }else {
+            val schaden = schadenMultiplikator1!!
+            return schaden
         }
     }
     return null                  // Wenn einer der Schadensmultiplikatoren nicht gefunden wurde, wird null zurückgegeben
@@ -33,12 +35,15 @@ fun damage(meinAngriff: PokemonAttacke, gegnerPokemon: Pair<PokemonTyp, PokemonT
 
 
 
+
+
 /*
 In dieser Funktion werden die Werte meines und des Gegner_Pokemon verrechnet.
 Das Ganze wird mit dem Schadenswert der Attacke multipliziert.
  */
-fun verrechnung(meinAngriff: Int, gegnerVerteidigung: Int, schadensWertAttacke: Int): Int {
-    val schaden = (meinAngriff / gegnerVerteidigung) * schadensWertAttacke
+
+fun satatusWertBerechnung(meinAngriff: Int, gegnerVerteidigung: Int, schadensWertAttacke: Int): Double {
+    val schaden = (meinAngriff.toDouble() / gegnerVerteidigung.toDouble()) * schadensWertAttacke.toDouble()
 
     return schaden
 }
@@ -47,27 +52,65 @@ fun verrechnung(meinAngriff: Int, gegnerVerteidigung: Int, schadensWertAttacke: 
 
 
 
+/*
+Diese Funktion berechnet den ausgeteilten Schaden basierend auf den Pokemon.
+Bsp.: Glurak nutzt eine Attacke vom Typ Feuer, diese Attacke hat Schadenswert x.
+Schadenswert x wird dann über die Funktionen "typenMultiplikatoren" und "statusWertBerechnung" miteinander
+verrechnet.
+ */
 
-fun effektivitaet(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWertAttacke: PokemonAttacke): Double?{
-    val schaden = verrechnung(meinPokemon.angriff, gegnerPokemon.verteidigung, schadensWertAttacke.schaden)
+fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWertAttacke: PokemonAttacke):Double?{
 
-    println("Der Schaden beträgt: $schaden")
 
-    val zufallsAttacke = meinPokemon.attacke.random()
-    val multiplikator = damage(zufallsAttacke, Pair(gegnerPokemon.typ1, gegnerPokemon.typ2))
+    println("${meinPokemon.name} setzt ${schadensWertAttacke.name} ein")
 
-    println("Der Multiplikator beträgt $multiplikator")
 
-    val effektivitaet = multiplikator?.times(schaden)
 
-    println("Der Schaden des Angriffs beträgt $effektivitaet")
 
-    return effektivitaet
+    if(schadensWertAttacke.physischSpezial.contains("Spezial")){
+        val speziellerSchaden = satatusWertBerechnung(meinPokemon.spezialAngriff, gegnerPokemon.spezialverteidigung, schadensWertAttacke.schaden)
+        println("Der Schaden beträgt: ${schadensWertAttacke.schaden}")
+
+        val multiplikator = typenMultiplikator(schadensWertAttacke, gegnerPokemon)
+        println("Der Multiplikator beträgt $multiplikator")
+
+        val speziellerGesamtSchaden = multiplikator?.times(speziellerSchaden)
+        if (speziellerGesamtSchaden != null) {
+            println("Der Schaden des Angriffs beträgt ${speziellerGesamtSchaden.toInt()}")
+        }
+        val erlittenerSchaden = gegnerPokemon.kp - speziellerGesamtSchaden!!
+        println("${gegnerPokemon.name} hat noch $erlittenerSchaden Kp.")
+
+        return speziellerGesamtSchaden
+    }
+    else{
+        val physischerSchaden = satatusWertBerechnung(meinPokemon.angriff, gegnerPokemon.verteidigung, schadensWertAttacke.schaden)
+        println("Der Schaden beträgt: ${schadensWertAttacke.schaden}")
+        val multiplikator = typenMultiplikator(schadensWertAttacke, gegnerPokemon)
+        println("Der Multiplikator beträgt $multiplikator")
+        val physischerGesamtSchaden = multiplikator?.times(physischerSchaden)
+        println("Der Schaden des Angriffs beträgt $physischerGesamtSchaden")
+
+        val erlittenerSchaden = gegnerPokemon.kp - physischerGesamtSchaden!!
+        println("${gegnerPokemon.name} hat noch $erlittenerSchaden Kp.")
+
+        return physischerGesamtSchaden
+
+    }
+
 }
 
 
 
+
+
+/*
+Eine Funktion die in der Konsole ausgibt welche Angriffe verfügbar sind und den Nutzer
+um eine Eingabe zur Attackenauswahl bittet.
+*/
+
 fun attackenAuswahl(pokemon: Pokemon){
+
 
     println("Gib eine Nummer ein für die jeweilige Attacke.")
 
@@ -94,7 +137,10 @@ fun attackenAuswahl(pokemon: Pokemon){
 
 
 
-
+fun ausgeteilterSchaden(gegnerKp: Pokemon, schadenAttacke: Double):Double{
+    val angriff = gegnerKp.kp - schadenAttacke
+    return angriff
+}
 
 
 
