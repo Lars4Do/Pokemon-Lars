@@ -28,7 +28,7 @@ fun teamGlurak() :MutableList<Pokemon>{
 
 
 
-fun teamTurtok() :MutableList<Pokemon>{
+fun teamTurtok():MutableList<Pokemon>{
     val turtok = Turtok()
     val pelipper = Pelipper()
     val seedraking = Seedraking()

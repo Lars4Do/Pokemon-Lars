@@ -9,7 +9,7 @@ class Kokowei():Pokemon(
     50,
     "Überreste",
     "Chlorophyll",
-    mutableListOf("Psychokinese", "Sonnentag", "Solarstrahl", "Synthese"),
+    mutableListOf(PokemonAttacke.Psychokinese, PokemonAttacke.Sonnentag, PokemonAttacke.Solarstrahl, PokemonAttacke.Synthese),
     202,
     161,
     150,

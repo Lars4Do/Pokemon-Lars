@@ -67,15 +67,35 @@ fun effektivitaet(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWertAtta
 
 
 
-fun attackenAuswahl(attacke: PokemonAttacke){
+fun attackenAuswahl(pokemon: Pokemon){
 
-    println("Gib eine Nummer ein für die jeweilige Attacke." +
-            "1 für")
-    val input = readln().toInt()
+    println("Gib eine Nummer ein für die jeweilige Attacke.")
+
+    var zahl: Int = 1
+    for (attacke in pokemon.attacke){
+        print(1)
+        println("für $attacke")
+        zahl++
+    }
+    val input = readln().toInt()-1
 
     when(input){
-        1 -> attacke[PokemonAttacke]
+        1 -> pokemon.attacke[0]
+        2 -> pokemon.attacke[1]
+        3 -> pokemon.attacke[2]
+        4 -> pokemon.attacke[3]
+        else ->{ println("ungültig")
+        attackenAuswahl(pokemon)}
     }
 
-
+    println("$pokemon setzt ${pokemon.attacke} ein")
 }
+
+
+
+
+
+
+
+
+

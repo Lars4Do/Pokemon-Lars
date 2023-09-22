@@ -1,13 +1,13 @@
 import PokemonKlassen.*
 
 
-fun main(){
+/*fun main(){
 
    teamInformation()
    readln()
-   teamAuswahlSpieler1()
+   //teamAuswahlSpieler1()
    readln()
-   teamAuswahlSpieler2()
+  // teamAuswahlSpieler2()
 
 }
 
@@ -15,4 +15,4 @@ fun main(){
 
 //fun angriff(spieler1: Pokemon, spieler2: Pokemon){
   //  var spieler1=
-//}
+//}*/

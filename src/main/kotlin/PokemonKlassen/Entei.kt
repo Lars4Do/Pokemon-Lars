@@ -7,7 +7,7 @@ class Entei():Pokemon(
     50,
     "Überreste",
     "Feuerfänger",
-    mutableListOf("Läuterfeuer", "Fruststampfer", "Schutzschild", "Solarstrahl"),
+    mutableListOf(PokemonAttacke.Läuterfeuer, PokemonAttacke.Fruststampfer, PokemonAttacke.Schutzschild, PokemonAttacke.Solarstrahl),
     222,
     183,
     150,

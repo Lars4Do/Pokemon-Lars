@@ -9,7 +9,7 @@ class Bisaflor():Pokemon(
     50,
     "Leben-Orb",
     "Chlorophyll",
-    mutableListOf("Solarstrahl", "Erdkräfte", "Matschbombe", "Schlafpuder"),
+    mutableListOf(PokemonAttacke.Solarstrahl, PokemonAttacke.Erdkräfte, PokemonAttacke.Matschbombe, PokemonAttacke.Schlafpuder),
     187,
     147,
     148,

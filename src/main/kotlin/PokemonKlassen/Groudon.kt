@@ -9,7 +9,7 @@ class Groudon():Pokemon(
     50,
     "Überreste",
     "Dürre",
-    mutableListOf("Erdbeben", "Feuerschlag", "Protzer", "Schutzschild"),
+    mutableListOf(PokemonAttacke.Erdbeben, PokemonAttacke.Feuerschlag, PokemonAttacke.Protzer, PokemonAttacke.Schutzschild),
     207,
     222,
     211,

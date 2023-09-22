@@ -7,7 +7,7 @@ class Qurtel():Pokemon(
     50,
     "Heißbrocken",
     "Dürre",
-    mutableListOf("Eruption", "Solarstrahl", "Erdkräfte", "Schutzschild"),
+    mutableListOf(PokemonAttacke.Eruption, PokemonAttacke.Solarstrahl, PokemonAttacke.Erdkräfte, PokemonAttacke.Schutzschild),
     177,
     150,
     211,

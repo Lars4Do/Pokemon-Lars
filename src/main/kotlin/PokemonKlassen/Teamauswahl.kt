@@ -1,6 +1,6 @@
 package PokemonKlassen
 
-fun teamAuswahlSpieler1():MutableList<MutableList<Pokemon>> {
+/*fun teamAuswahlSpieler1():MutableList<MutableList<Pokemon>> {
 
     println("Spieler 1, bitte gib eine Nummer ein.\n" +
             "Wähle 1 für Team Turtok\n" +
@@ -41,4 +41,4 @@ fun teamAuswahlSpieler2():MutableList<MutableList<Pokemon>>{
         3 -> player2.add(teamBisaflor())
     }
     return player2
-}
+}*/

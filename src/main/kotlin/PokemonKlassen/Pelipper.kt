@@ -9,7 +9,7 @@ class Pelipper ():Pokemon(
     50,
     "Nassbrocken",
     "Niesel",
-    mutableListOf("Orkan", "Hydropumpe", "Rückenwind", "Regentanz"),
+    mutableListOf(PokemonAttacke.Orkan, PokemonAttacke.Hydropumpe, PokemonAttacke.Rückenwind, PokemonAttacke.Regentanz),
     167,
     112,
     167,

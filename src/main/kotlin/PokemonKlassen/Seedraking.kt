@@ -9,7 +9,7 @@ class Seedraking():Pokemon(
     50,
     "Leben-Orb",
     "Wassertempo",
-    mutableListOf("Kaskade", "Drachentanz", "Wutanfall", "Aquadurchstoß"),
+    mutableListOf(PokemonAttacke.Kaskade, PokemonAttacke.Drachentanz, PokemonAttacke.Wutanfall, PokemonAttacke.Aquadurchstoß),
     182,
     161,
     161,
