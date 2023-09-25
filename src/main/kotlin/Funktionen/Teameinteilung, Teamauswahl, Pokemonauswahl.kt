@@ -84,11 +84,11 @@ fun teamAuswahlSpieler(spieler: Player):MutableList<Pokemon> {
 
     var pokemonListe: MutableList<Pokemon> = mutableListOf()
 
-    val input1 = readln().toInt()
+    val input = readln().toInt()
 
     println("${spieler.name}, dein Team besteht aus")
 
-    when (input1) {
+    when (input) {
         1 -> pokemonListe = teamTurtok()
         2 -> pokemonListe = teamGlurak()
         3 -> pokemonListe = teamBisaflor()
@@ -101,29 +101,28 @@ fun teamAuswahlSpieler(spieler: Player):MutableList<Pokemon> {
 }
 
 
-/*fun pokemonAuswahl(spieler: Player):Pokemon{
+fun pokemonAuswahl(spieler: Player):Pokemon?{
 
     println("${spieler.name}, wähle dein Pokemon für den Kampf aus.\n" +
-            "1 für ${teamAuswahlSpieler(spieler)[0]}\n" +
-            "2 für ${teamAuswahlSpieler(spieler)[1]}\n" +
-            "3 für ${teamAuswahlSpieler(spieler)[2]}\n" +
-            "4 für ${teamAuswahlSpieler(spieler)[3]}")
+            "1 für ${spieler.team[0]}\n" +
+            "2 für ${spieler.team[1]}\n" +
+            "3 für ${spieler.team[2]}\n" +
+            "4 für ${spieler.team[3]}")
 
-    var pokemonImKampf: Pokemon = P
+    var pokemonImKampf: Pokemon? = null
 
-    var input = readln().toInt()
+    val input = readln().toInt()
 
 
     when(input){
-        1 -> pokemonImKampf = teamAuswahlSpieler(spieler)[0]
-        2 -> pokemonImKampf = teamAuswahlSpieler(spieler)[1]
-        3 -> pokemonImKampf = teamAuswahlSpieler(spieler)[2]
-        4 -> pokemonImKampf = teamAuswahlSpieler(spieler)[3]
+        1 -> pokemonImKampf = spieler.team[0]
+        2 -> pokemonImKampf = spieler.team[1]
+        3 -> pokemonImKampf = spieler.team[2]
+        4 -> pokemonImKampf = spieler.team[3]
         else -> {println("Ungültige Eingabe, versuch es noch einmal")
             pokemonAuswahl(spieler)
         }
     }
     return pokemonImKampf
-
-}*/
+}
 
