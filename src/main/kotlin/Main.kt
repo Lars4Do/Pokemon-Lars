@@ -1,6 +1,3 @@
-import PokemonKlassen.*
-
-
 /*fun main(){
 
    teamInformation()

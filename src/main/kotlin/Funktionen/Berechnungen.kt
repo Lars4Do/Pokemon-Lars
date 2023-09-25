@@ -1,6 +1,7 @@
-package PokemonKlassen
+package Funktionen
 import multiplikatoren
-
+import pokemonKlassen.Pokemon
+import EnumKlassenTypenUndAttacken.PokemonAttacke
 
 
 /*
@@ -37,6 +38,8 @@ fun typenMultiplikator(meinAngriff: PokemonAttacke, gegnerPokemon: Pokemon): Dou
 
 
 
+
+
 /*
 In dieser Funktion werden die Werte meines und des Gegner_Pokemon verrechnet.
 Das Ganze wird mit dem Schadenswert der Attacke multipliziert.
@@ -52,6 +55,8 @@ fun satatusWertBerechnung(meinAngriff: Int, gegnerVerteidigung: Int, schadensWer
 
 
 
+
+
 /*
 Diese Funktion berechnet den ausgeteilten Schaden basierend auf den Pokemon.
 Bsp.: Glurak nutzt eine Attacke vom Typ Feuer, diese Attacke hat Schadenswert x.
@@ -59,12 +64,10 @@ Schadenswert x wird dann über die Funktionen "typenMultiplikatoren" und "status
 verrechnet.
  */
 
-fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWertAttacke: PokemonAttacke):Double?{
+fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWertAttacke: PokemonAttacke): Double {
 
 
     println("${meinPokemon.name} setzt ${schadensWertAttacke.name} ein")
-
-
 
 
     if(schadensWertAttacke.physischSpezial.contains("Spezial")){
@@ -82,6 +85,7 @@ fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWer
         println("${gegnerPokemon.name} hat noch $erlittenerSchaden Kp.")
 
         return speziellerGesamtSchaden
+
     }
     else{
         val physischerSchaden = satatusWertBerechnung(meinPokemon.angriff, gegnerPokemon.verteidigung, schadensWertAttacke.schaden)
@@ -95,10 +99,9 @@ fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWer
         println("${gegnerPokemon.name} hat noch $erlittenerSchaden Kp.")
 
         return physischerGesamtSchaden
-
     }
-
 }
+
 
 
 
@@ -128,19 +131,12 @@ fun attackenAuswahl(pokemon: Pokemon){
         3 -> pokemon.attacke[2]
         4 -> pokemon.attacke[3]
         else ->{ println("ungültig")
-        attackenAuswahl(pokemon)}
+        attackenAuswahl(pokemon)
+        }
     }
-
     println("$pokemon setzt ${pokemon.attacke} ein")
 }
 
-
-
-
-fun ausgeteilterSchaden(gegnerKp: Pokemon, schadenAttacke: Double):Double{
-    val angriff = gegnerKp.kp - schadenAttacke
-    return angriff
-}
 
 
 

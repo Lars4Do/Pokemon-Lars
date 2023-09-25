@@ -1,6 +1,6 @@
-package PokemonKlassen
+package pokemonKlassen
 
-import PokemonKlassen.Pokemon
+import EnumKlassenTypenUndAttacken.PokemonAttacke
 
 class Bisaflor():Pokemon(
     "Bisaflor",

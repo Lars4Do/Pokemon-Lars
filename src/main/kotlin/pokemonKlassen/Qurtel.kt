@@ -1,4 +1,6 @@
-package PokemonKlassen
+package pokemonKlassen
+
+import EnumKlassenTypenUndAttacken.PokemonAttacke
 
 class Qurtel():Pokemon(
     "Qurtel",

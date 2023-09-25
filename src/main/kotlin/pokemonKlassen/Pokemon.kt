@@ -1,6 +1,7 @@
-package PokemonKlassen
+package pokemonKlassen
 
 import PokemonTyp
+import EnumKlassenTypenUndAttacken.PokemonAttacke
 
 open class Pokemon (
     var name: String,

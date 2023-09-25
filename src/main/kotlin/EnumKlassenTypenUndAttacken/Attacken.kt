@@ -1,6 +1,12 @@
-package PokemonKlassen
+package EnumKlassenTypenUndAttacken
 
 import PokemonTyp
+
+
+
+
+//Eine Liste mit all meinen Angriffen, abgespeichert in einer enum class.
+
 
 enum class PokemonAttacke(
     val typ: PokemonTyp,

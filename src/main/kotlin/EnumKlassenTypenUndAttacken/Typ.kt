@@ -1,5 +1,7 @@
-import PokemonKlassen.Pokemon
-import PokemonKlassen.PokemonAttacke
+
+
+
+// Eine große Map in der einmal der Multiplikator aller Pokemontypen aufgelistet ist (wie effektiv welcher Typ auf was ist).
 
 enum class PokemonTyp {
     NORMAL,
