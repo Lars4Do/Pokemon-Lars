@@ -1,5 +1,6 @@
 package Funktionen
 
+import EnumKlassenTypenUndAttacken.PokemonAttacke
 import Spieler.Player
 import pokemonKlassen.*
 
@@ -124,5 +125,38 @@ fun pokemonAuswahl(spieler: Player):Pokemon?{
         }
     }
     return pokemonImKampf
+}
+
+
+
+
+
+
+fun attackenAuswahl(pokemon: Pokemon):PokemonAttacke{
+
+
+    println("Gib eine Nummer ein für die jeweilige Attacke.")
+
+    var zahl: Int = 1
+    for (attacke in pokemon.attacke){
+        print(zahl)
+        println(" für $attacke")
+        zahl++
+    }
+    val input = readln().toInt()
+    val attacke: PokemonAttacke
+
+    when(input){
+        1 -> attacke = pokemon.attacke[0]
+        2 -> attacke = pokemon.attacke[1]
+        3 -> attacke = pokemon.attacke[2]
+        4 -> attacke = pokemon.attacke[3]
+        else ->{ println("ungültig")
+            attacke = attackenAuswahl(pokemon)
+        }
+    }
+    println("$pokemon setzt $attacke ein")
+    return attacke
+
 }
 

@@ -82,7 +82,11 @@ fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWer
             println("Der Schaden des Angriffs beträgt ${speziellerGesamtSchaden.toInt()}")
         }
         val erlittenerSchaden = gegnerPokemon.kp - speziellerGesamtSchaden!!
+        if (erlittenerSchaden > gegnerPokemon.kp){
         println("${gegnerPokemon.name} hat noch $erlittenerSchaden Kp.")
+        }else{
+            println("Die Kp sind auf 0 gefallen, dein Pokemon wurde besiegt.")
+        }
 
         return speziellerGesamtSchaden
 
@@ -104,38 +108,6 @@ fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWer
 
 
 
-
-
-
-/*
-Eine Funktion die in der Konsole ausgibt welche Angriffe verfügbar sind und den Nutzer
-um eine Eingabe zur Attackenauswahl bittet.
-*/
-
-fun attackenAuswahl(pokemon: Pokemon){
-
-
-    println("Gib eine Nummer ein für die jeweilige Attacke.")
-
-    var zahl: Int = 1
-    for (attacke in pokemon.attacke){
-        print(1)
-        println("für $attacke")
-        zahl++
-    }
-    val input = readln().toInt()-1
-
-    when(input){
-        1 -> pokemon.attacke[0]
-        2 -> pokemon.attacke[1]
-        3 -> pokemon.attacke[2]
-        4 -> pokemon.attacke[3]
-        else ->{ println("ungültig")
-        attackenAuswahl(pokemon)
-        }
-    }
-    println("$pokemon setzt ${pokemon.attacke} ein")
-}
 
 
 
