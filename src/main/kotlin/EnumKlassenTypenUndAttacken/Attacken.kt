@@ -12,13 +12,14 @@ enum class PokemonAttacke(
     val typ: PokemonTyp,
     val schaden: Int,
     val genauigkeit: Int,
-    val physischSpezial: String) {
+    val physischSpezial: String,
+    val schild: Boolean = false) {
 
     Hydropumpe(PokemonTyp.WASSER, 110, 80, "Spezial"),
     Orkan(PokemonTyp.FLUG, 110, 70, "Spezial"),
     Eisstrahl(PokemonTyp.EIS, 90, 100, "Spezial"),
     Hausbruch(PokemonTyp.NORMAL, 0, 100, "Physisch"),
-    Schutzschild(PokemonTyp.NORMAL, 0, 100, "Physisch"),
+    Schutzschild(PokemonTyp.NORMAL, 0, 100, "Physisch", true),
     Donner(PokemonTyp.ELEKTRO, 110, 70, "Spezial"),
     Hitzewelle(PokemonTyp.FEUER, 95, 90, "Spezial"),
     Ruheort(PokemonTyp.FLUG, 0, 100, "Physisch"),

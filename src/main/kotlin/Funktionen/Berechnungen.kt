@@ -81,11 +81,11 @@ fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWer
         if (speziellerGesamtSchaden != null) {
             println("Der Schaden des Angriffs beträgt ${speziellerGesamtSchaden.toInt()}")
         }
-        val erlittenerSchaden = gegnerPokemon.kp - speziellerGesamtSchaden!!
-        if (erlittenerSchaden > gegnerPokemon.kp){
-        println("${gegnerPokemon.name} hat noch $erlittenerSchaden Kp.")
+        val neuerKPWert = gegnerPokemon.kp - speziellerGesamtSchaden!!
+        if (neuerKPWert > 0){
+        println("${gegnerPokemon.name} hat noch ${neuerKPWert.toInt()} Kp.")
         }else{
-            println("Die Kp sind auf 0 gefallen, dein Pokemon wurde besiegt.")
+            println("Die Kp sind auf 0 gefallen, ${gegnerPokemon.name} wurde besiegt.")
         }
 
         return speziellerGesamtSchaden
@@ -99,8 +99,12 @@ fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWer
         val physischerGesamtSchaden = multiplikator?.times(physischerSchaden)
         println("Der Schaden des Angriffs beträgt $physischerGesamtSchaden")
 
-        val erlittenerSchaden = gegnerPokemon.kp - physischerGesamtSchaden!!
-        println("${gegnerPokemon.name} hat noch $erlittenerSchaden Kp.")
+        val neuerKPWert = gegnerPokemon.kp - physischerGesamtSchaden!!
+        if (neuerKPWert > 0){
+            println("${gegnerPokemon.name} hat noch ${neuerKPWert.toInt()} Kp.")
+        }else{
+            println("Die Kp sind auf 0 gefallen, ${gegnerPokemon.name} wurde besiegt.")
+        }
 
         return physischerGesamtSchaden
     }

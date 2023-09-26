@@ -5,8 +5,10 @@ import Spieler.Player
 import pokemonKlassen.*
 
 
-
-// Hier habe ich 3 Funktionen geschrieben um meine Pokemon in meine gewünschten Teams zu unterteilen.
+/**
+ * Hier habe ich 3 Funktionen geschrieben um meine Pokemon in meine gewünschten Teams zu unterteilen.
+ * @return
+ */
 fun teamBisaflor():MutableList<Pokemon>{
 
     val bisaflor = Bisaflor()
@@ -102,28 +104,24 @@ fun teamAuswahlSpieler(spieler: Player):MutableList<Pokemon> {
 }
 
 
-fun pokemonAuswahl(spieler: Player):Pokemon?{
+fun pokemonAuswahl(spieler: Player):Pokemon{
 
-    println("${spieler.name}, wähle dein Pokemon für den Kampf aus.\n" +
-            "1 für ${spieler.team[0]}\n" +
-            "2 für ${spieler.team[1]}\n" +
-            "3 für ${spieler.team[2]}\n" +
-            "4 für ${spieler.team[3]}")
-
-    var pokemonImKampf: Pokemon? = null
+    println("${spieler.name}, wähle dein Pokemon für den Kampf aus.\n" )
+          for((i,pokemon) in spieler.team.withIndex()){
+              println("Drücke ${i+1} für ${pokemon}")
+          }
+    val pokemonImKampf: Pokemon
 
     val input = readln().toInt()
 
 
-    when(input){
-        1 -> pokemonImKampf = spieler.team[0]
-        2 -> pokemonImKampf = spieler.team[1]
-        3 -> pokemonImKampf = spieler.team[2]
-        4 -> pokemonImKampf = spieler.team[3]
-        else -> {println("Ungültige Eingabe, versuch es noch einmal")
-            pokemonAuswahl(spieler)
-        }
+    pokemonImKampf = if (input <= spieler.team.size){
+        spieler.team[input-1]
+    }else {println("Ungültige Eingabe, versuch es noch einmal")
+        pokemonAuswahl(spieler)
     }
+
+    spieler.team.remove(pokemonImKampf)
     return pokemonImKampf
 }
 
