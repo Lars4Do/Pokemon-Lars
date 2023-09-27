@@ -53,7 +53,7 @@ fun typenMultiplikator(meinAngriff: PokemonAttacke, gegnerPokemon: Pokemon): Dou
  * @return: Gibt den errechneten Wert zurück.
  */
 
-fun satatusWertBerechnung(meinAngriff: Int, gegnerVerteidigung: Int, schadensWertAttacke: Int): Double {
+fun statusWertBerechnung(meinAngriff: Int, gegnerVerteidigung: Int, schadensWertAttacke: Int): Double {
     val schaden = (meinAngriff.toDouble() / gegnerVerteidigung.toDouble()) * schadensWertAttacke.toDouble()
 
     return schaden
@@ -82,7 +82,7 @@ fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWer
 
 
     if(schadensWertAttacke.physischSpezial.contains("Spezial")){
-        val speziellerSchaden = satatusWertBerechnung(meinPokemon.spezialAngriff, gegnerPokemon.spezialverteidigung, schadensWertAttacke.schaden)
+        val speziellerSchaden = statusWertBerechnung(meinPokemon.spezialAngriff, gegnerPokemon.spezialverteidigung, schadensWertAttacke.schaden)
         println("Der Schaden beträgt: ${schadensWertAttacke.schaden}")
 
         val multiplikator = typenMultiplikator(schadensWertAttacke, gegnerPokemon)
@@ -103,7 +103,7 @@ fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWer
 
     }
     else{
-        val physischerSchaden = satatusWertBerechnung(meinPokemon.angriff, gegnerPokemon.verteidigung, schadensWertAttacke.schaden)
+        val physischerSchaden = statusWertBerechnung(meinPokemon.angriff, gegnerPokemon.verteidigung, schadensWertAttacke.schaden)
         println("Der Schaden beträgt: ${schadensWertAttacke.schaden}")
         val multiplikator = typenMultiplikator(schadensWertAttacke, gegnerPokemon)
         println("Der Multiplikator beträgt $multiplikator")
