@@ -1,14 +1,15 @@
-package Funktionen
+package funktionen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
-import Spieler.Player
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import spieler.Player
 import pokemonKlassen.*
 
 
 /**
- * Hier habe ich 3 Funktionen geschrieben um meine Pokemon in meine gewünschten Teams zu unterteilen.
- * @return
+ * Hier habe ich 3 Funktionen geschrieben, um meine Pokemon in meine gewünschten Teams zu unterteilen.
+ * @return: Gibt eine Liste mit den 4 hinzugefügten Pokemon zurück. (Gleiches gilt für die Funktion "teamGlurak" und "teamTurtok".)
  */
+
 fun teamBisaflor():MutableList<Pokemon>{
 
     val bisaflor = Bisaflor()
@@ -50,9 +51,11 @@ fun teamTurtok():MutableList<Pokemon>{
 }
 
 
-
-
-// Eine kleine Funktion um auszugeben welche Pokemon in welchem Team sind.
+/**
+ * Eine kleine Funktion um die Teaminformationen auszugeben.
+ *
+ * @return: Gibt die Teaminformationen zurück.
+ */
 
 fun teamInformation():String{
     println("Das erste Team besteht aus:")
@@ -75,7 +78,15 @@ fun teamInformation():String{
 
 
 
-// Hier gebe ich dem Spieler die Auswahl aus einem von 3 Teams.
+
+
+/**
+ * Eine Funktion um beiden Spielern die Möglichkeit zu geben eins von drei Teams auszuwählen.
+ *
+ * @param spieler: Gibt den Spieler an, der sich ein Team aussuchen kann.
+ *
+ * @return: Gibt das Team als MutableList zurück.
+ */
 
 fun teamAuswahlSpieler(spieler: Player):MutableList<Pokemon> {
 
@@ -104,6 +115,14 @@ fun teamAuswahlSpieler(spieler: Player):MutableList<Pokemon> {
 }
 
 
+/**
+ * Eine Funktion um auszuwählen welches Pokemon man in den Kampf schicken möchte.
+ *
+ * @param spieler: Gibt den Spieler und sein zuvor ausgesuchtes Team an.
+ *
+ * @return: Gibt das Pokemon zurück welches in den Kampf geschickt werden soll.
+ */
+
 fun pokemonAuswahl(spieler: Player):Pokemon{
 
     println("${spieler.name}, wähle dein Pokemon für den Kampf aus.\n" )
@@ -129,6 +148,13 @@ fun pokemonAuswahl(spieler: Player):Pokemon{
 
 
 
+/**
+ * Eine Funktion um auszuwählen welche Attacke das Pokemon welches aktuell am Kampf teilnimmt einsetzen soll.
+ *
+ * @param pokemon: Gibt das pokemon an welches sich aktuell im Kampf befindet.
+ *
+ * @return: Gibt die ausgewählte Attacke zurück.
+ */
 
 fun attackenAuswahl(pokemon: Pokemon):PokemonAttacke{
 

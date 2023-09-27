@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Glurak():Pokemon(
     "Glurak",
@@ -10,7 +11,7 @@ class Glurak():Pokemon(
     "Leben-Orb",
     "Solarkraft",
     mutableListOf(PokemonAttacke.Feuersturm, PokemonAttacke.Brandsand, PokemonAttacke.Luftschnitt, PokemonAttacke.Ruheort),
-    185,
+    185.0,
     149,
     143,
     177,

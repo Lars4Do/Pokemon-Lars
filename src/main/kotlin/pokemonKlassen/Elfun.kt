@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Elfun():Pokemon(
     "Elfun",
@@ -10,7 +11,7 @@ class Elfun():Pokemon(
     "Fokusgurt",
     "Strolch",
     mutableListOf(PokemonAttacke.Rückenwind, PokemonAttacke.Solarstrahl, PokemonAttacke.Mondgewalt, PokemonAttacke.Schutzschild),
-    167,
+    167.0,
     130,
     150,
     141,

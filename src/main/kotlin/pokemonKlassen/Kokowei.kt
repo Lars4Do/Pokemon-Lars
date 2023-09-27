@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Kokowei():Pokemon(
     "Kokowei",
@@ -10,7 +11,7 @@ class Kokowei():Pokemon(
     "Überreste",
     "Chlorophyll",
     mutableListOf(PokemonAttacke.Psychokinese, PokemonAttacke.Sonnentag, PokemonAttacke.Solarstrahl, PokemonAttacke.Synthese),
-    202,
+    202.0,
     161,
     150,
     194,

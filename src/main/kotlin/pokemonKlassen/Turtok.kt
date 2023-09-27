@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Turtok ():Pokemon(
     "Turtok",
@@ -10,7 +11,7 @@ class Turtok ():Pokemon(
     "Überreste",
     "Regengenuss",
     mutableListOf(PokemonAttacke.Hydropumpe, PokemonAttacke.Eisstrahl, PokemonAttacke.Hausbruch, PokemonAttacke.Regentanz),
-    186,
+    186.0,
     148,
     167,
     150,

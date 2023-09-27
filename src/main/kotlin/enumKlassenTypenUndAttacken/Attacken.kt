@@ -1,25 +1,29 @@
-package EnumKlassenTypenUndAttacken
-
-import PokemonTyp
+package enumKlassenTypenUndAttacken
 
 
-
-
-//Eine Liste mit all meinen Angriffen, abgespeichert in einer enum class.
+/**
+ * Eine enum Klasse in der meine ganzen Angriffe für die einzelnen Pokemon abgespeichert sind.
+ *
+ * @param typ: Sagt aus, von welchem Typen der Angriff ist. (Bsp.: Donner ist vom Typ Elektro.)
+ * @param schaden: Gibt den Schadenswert jedes einzelnen Angriffs an.
+ * @param genauigkeit: Wird aus Zeitgründen nicht genutzt.
+ * @param physischSpezial: Definiert, ob der Angriff physisch oder speziell ist.
+ *                        (In Pokemon bedeutet das quasi, ob ein Angriff Fern- oder Nahkampf ist.)
+ */
 
 
 enum class PokemonAttacke(
     val typ: PokemonTyp,
     val schaden: Int,
     val genauigkeit: Int,
-    val physischSpezial: String,
-    val schild: Boolean = false) {
+    val physischSpezial: String){
+
 
     Hydropumpe(PokemonTyp.WASSER, 110, 80, "Spezial"),
     Orkan(PokemonTyp.FLUG, 110, 70, "Spezial"),
     Eisstrahl(PokemonTyp.EIS, 90, 100, "Spezial"),
     Hausbruch(PokemonTyp.NORMAL, 0, 100, "Physisch"),
-    Schutzschild(PokemonTyp.NORMAL, 0, 100, "Physisch", true),
+    Schutzschild(PokemonTyp.NORMAL, 0, 100, "Physisch"),
     Donner(PokemonTyp.ELEKTRO, 110, 70, "Spezial"),
     Hitzewelle(PokemonTyp.FEUER, 95, 90, "Spezial"),
     Ruheort(PokemonTyp.FLUG, 0, 100, "Physisch"),
@@ -44,9 +48,10 @@ enum class PokemonAttacke(
     Mondgewalt(PokemonTyp.FEE, 95, 100, "Spezial"),
     Synthese(PokemonTyp.PFLANZE, 0, 100, "Physisch"),
     Regentanz(PokemonTyp.WASSER, 0, 100, "Physisch"),
-    Eruption(PokemonTyp.FEUER, 150, 100, "Spezial"),     //variiert, 150* (aktuelle kp/ max kp)
+    Eruption(PokemonTyp.FEUER, 150, 100, "Spezial"),
     Kaskade(PokemonTyp.WASSER, 80, 100, "Physisch"),
     Drachentanz(PokemonTyp.DRACHE, 0, 100, "Physisch"),
     Aquadurchstoß(PokemonTyp.WASSER, 85, 100, "Physisch"),
-    Wutanfall(PokemonTyp.DRACHE, 120, 100, "Physisch");
+    Wutanfall(PokemonTyp.DRACHE, 120, 100, "Physisch")
 }
+

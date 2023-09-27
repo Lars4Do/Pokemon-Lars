@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Zapdos():Pokemon(
     "Zapdos",
@@ -10,7 +11,7 @@ class Zapdos():Pokemon(
     "Tsitrubeere",
     "Statik",
     mutableListOf(PokemonAttacke.Donner, PokemonAttacke.Orkan, PokemonAttacke.Hitzewelle, PokemonAttacke.Ruheort),
-    197,
+    197.0,
     156,
     150,
     194,

@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Entei():Pokemon(
     "Entei",
@@ -10,7 +11,7 @@ class Entei():Pokemon(
     "Überreste",
     "Feuerfänger",
     mutableListOf(PokemonAttacke.Läuterfeuer, PokemonAttacke.Fruststampfer, PokemonAttacke.Schutzschild, PokemonAttacke.Solarstrahl),
-    222,
+    222.0,
     183,
     150,
     156,

@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Pelipper ():Pokemon(
     "Pelipper",
@@ -10,7 +11,7 @@ class Pelipper ():Pokemon(
     "Nassbrocken",
     "Niesel",
     mutableListOf(PokemonAttacke.Orkan, PokemonAttacke.Hydropumpe, PokemonAttacke.Rückenwind, PokemonAttacke.Regentanz),
-    167,
+    167.0,
     112,
     167,
     161,

@@ -1,14 +1,17 @@
-import Funktionen.*
-import Spieler.Player
-import pokemonKlassen.Pokemon
+package funktionen
 
-/*import damage
-import effektivitaet
-import verrechnung*/
+import spieler.Player
 
+
+/*
+Diese Funktion ist der komplette Kampfablauf.
+Mit den beiden Variablen für die Spieler wird ein Name eingelesen, ein Team ausgewählt und ein Pokemon welches in
+den Kampf geschickt werden soll.
+
+Der Kampf läuft bis einer von beiden Spielern keine kampffähigen Pokemon mehr hat.
+*/
 
 fun kampf() {
-
     val spieler1 = Player()
     val spieler2 = Player()
 
@@ -92,15 +95,3 @@ fun kampf() {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Qurtel():Pokemon(
     "Qurtel",
@@ -10,7 +11,7 @@ class Qurtel():Pokemon(
     "Heißbrocken",
     "Dürre",
     mutableListOf(PokemonAttacke.Eruption, PokemonAttacke.Solarstrahl, PokemonAttacke.Erdkräfte, PokemonAttacke.Schutzschild),
-    177,
+    177.0,
     150,
     211,
     150,

@@ -1,7 +1,7 @@
 package pokemonKlassen
 
-import PokemonTyp
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
+import enumKlassenTypenUndAttacken.PokemonAttacke
 
 open class Pokemon (
     var name: String,
@@ -11,7 +11,7 @@ open class Pokemon (
     var item: String,
     var fähigkeit: String,
     var attacke: MutableList<PokemonAttacke>,
-    var kp: Int,
+    var kp: Double,
     var angriff: Int,
     var verteidigung: Int,
     var spezialAngriff: Int,

@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Elezard():Pokemon(
     "Elezard",
@@ -10,7 +11,7 @@ class Elezard():Pokemon(
     "Heißbrocken",
     "Solarkraft",
     mutableListOf(PokemonAttacke.Drachenpuls, PokemonAttacke.Sonnentag, PokemonAttacke.Donnerblitz, PokemonAttacke.Meteorologe),
-    169,
+    169.0,
     117,
     114,
     177,

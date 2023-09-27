@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Groudon():Pokemon(
     "Groudon",
@@ -10,7 +11,7 @@ class Groudon():Pokemon(
     "Überreste",
     "Dürre",
     mutableListOf(PokemonAttacke.Erdbeben, PokemonAttacke.Feuerschlag, PokemonAttacke.Protzer, PokemonAttacke.Schutzschild),
-    207,
+    207.0,
     222,
     211,
     167,

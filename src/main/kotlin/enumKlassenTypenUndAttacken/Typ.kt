@@ -1,7 +1,12 @@
+package enumKlassenTypenUndAttacken
 
-
-
-// Eine große Map in der einmal der Multiplikator aller Pokemontypen aufgelistet ist (wie effektiv welcher Typ auf was ist).
+/**
+ * Eine eunum Klasse um meine Typeneffektivitiät aufzulisten.
+ * Dort ist der Multiplikator abgespeichert mit dem sich erfassen lässt wecher Typ effektiv oder ineffektiv gegen einen anderen ist.
+ * @param Normal: gibt den angreifenden Typen an und die Map gibt den angegriffenen Typen an mit deren Schadensmultiplikator.
+ * Bsp.: Mein Angriff von Typ Normal trifft auf Gegner Pokemon von Typ Stein.
+ *       Der Multiplikator beträgt 0.5, bedeutet mein Angriff macht 0.5 fachen Schaden.
+ */
 
 enum class PokemonTyp {
     NORMAL,

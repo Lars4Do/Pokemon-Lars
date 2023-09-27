@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Seedraking():Pokemon(
     "Seedraking",
@@ -10,7 +11,7 @@ class Seedraking():Pokemon(
     "Leben-Orb",
     "Wassertempo",
     mutableListOf(PokemonAttacke.Kaskade, PokemonAttacke.Drachentanz, PokemonAttacke.Wutanfall, PokemonAttacke.Aquadurchstoß),
-    182,
+    182.0,
     161,
     161,
     161,

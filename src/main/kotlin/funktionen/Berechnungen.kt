@@ -1,13 +1,18 @@
-package Funktionen
-import multiplikatoren
+package funktionen
+import enumKlassenTypenUndAttacken.multiplikatoren
 import pokemonKlassen.Pokemon
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
 
 
-/*
-Diese Funktion sucht den Schadensmultiplikator aus der "multiplikatoren".
-Bei einem Gegner mit zwei Typen werden die Schadensmultiplikatoren auch direkt miteinander verrechnet.
-*/
+/**
+ * Diese Funktion sucht den Schadensmultiplikator aus der "EnumKlassenTypenUndAttacken.getMultiplikatoren".
+ * Bei einem Gegner mit zwei Typen werden die Schadensmultiplikatoren auch direkt miteinander verrechnet.
+ *
+ * @param meinAngriff: Sucht in der Klasse PokemonAttacke den Typen den mein Angriff hat.(Key der äußeren Map.)
+ * @param gegnerPokemon: Sucht in der Klasse PokemonAttacke den Typen des Gegners. (Key der inneren Map.)
+ *                       Sollte der Gegner 2 Typen besitzen werden beide gesucht und miteinander multipliziert.
+ * @return: Gibt den gesuchten bzw. errechneten Multiplikator zurück. Null wird benutzt, falls das Gegnerpokemon nur einen Typen besitzt.
+ */
 
 fun typenMultiplikator(meinAngriff: PokemonAttacke, gegnerPokemon: Pokemon): Double? {
     val innerKey1 = gegnerPokemon.typ1
@@ -38,11 +43,14 @@ fun typenMultiplikator(meinAngriff: PokemonAttacke, gegnerPokemon: Pokemon): Dou
 
 
 
-
-
-/*
-In dieser Funktion werden die Werte meines und des Gegner_Pokemon verrechnet.
-Das Ganze wird mit dem Schadenswert der Attacke multipliziert.
+/**
+ * Diese Funktion dividiert den Angriffswert meines Pokemon mit der Verteidigung des Gegnerpokemon.
+ * Das Ergebnis wird dann mit dem Schadenswert der Attacke multipliziert.
+ *
+ * @param meinAngriff: Gibt den Angriffswert meines Pokemon an.
+ * @param gegnerVerteidigung: Gibt die Verteidigung des Gegnerpokemon an.
+ * @param schadensWertAttacke: Liest den Schadenswert des Angriffs aus der Klasse PokemonAttacken aus.
+ * @return: Gibt den errechneten Wert zurück.
  */
 
 fun satatusWertBerechnung(meinAngriff: Int, gegnerVerteidigung: Int, schadensWertAttacke: Int): Double {
@@ -55,13 +63,16 @@ fun satatusWertBerechnung(meinAngriff: Int, gegnerVerteidigung: Int, schadensWer
 
 
 
-
-
-/*
-Diese Funktion berechnet den ausgeteilten Schaden basierend auf den Pokemon.
-Bsp.: Glurak nutzt eine Attacke vom Typ Feuer, diese Attacke hat Schadenswert x.
-Schadenswert x wird dann über die Funktionen "typenMultiplikatoren" und "statusWertBerechnung" miteinander
-verrechnet.
+/**
+ * Diese Funktion errechnet den ausgeteilten Schaden. Gleichzeitig wird hier der physisch/ speziell split eingebaut. (Angegeben in der Klasse PokemonAttacken)
+ * Dazu wird der errechnete Schaden der Statuswerte aus der Funktion statusWertBerechnung mit dem Multiplikator aus der Funktion typenMultiplikator multipliziert.
+ * Mit der if-Abfrage werden entweder die physischen oder speziellen Statuswerte verrechnet, je nachdem was bei den Attacken abgespeichert ist.
+ *
+ * @param meinPokemon: Hier wird angegeben welches Pokemon ich aktuell im Kampf habe, um die Statuswerte auszulesen.
+ * @param gegnerPokemon: Hier wird angegeben welches Gegnerpokemon im Kampf ist, um dessen Statuswerte auszulesen.
+ * @param schadensWertAttacke: Liest den Schadenswert des Angriffs meines Pokemons aus um alles verrechnen zu können.
+ *
+ * @return: Gibt den errechneten Gesamtschaden zurück. (Egal ob physisch oder speziell)
  */
 
 fun schadensBerechnung(meinPokemon: Pokemon, gegnerPokemon: Pokemon, schadensWertAttacke: PokemonAttacke): Double {

@@ -1,6 +1,7 @@
 package pokemonKlassen
 
-import EnumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonAttacke
+import enumKlassenTypenUndAttacken.PokemonTyp
 
 class Bisaflor():Pokemon(
     "Bisaflor",
@@ -10,7 +11,7 @@ class Bisaflor():Pokemon(
     "Leben-Orb",
     "Chlorophyll",
     mutableListOf(PokemonAttacke.Solarstrahl, PokemonAttacke.Erdkräfte, PokemonAttacke.Matschbombe, PokemonAttacke.Schlafpuder),
-    187,
+    187.0,
     147,
     148,
     167,
