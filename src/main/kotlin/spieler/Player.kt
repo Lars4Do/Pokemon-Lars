@@ -13,7 +13,6 @@ import pokemonKlassen.Pokemon
 class Player (
     var name: String ="",
     var team: MutableList<Pokemon> = mutableListOf()
-
 )
 
 

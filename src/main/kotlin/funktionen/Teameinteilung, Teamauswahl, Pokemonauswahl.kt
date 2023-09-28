@@ -60,17 +60,14 @@ fun teamTurtok():MutableList<Pokemon>{
 fun teamInformation():String{
     println("Das erste Team besteht aus:")
     teamTurtok()
-    println("Es ist ein Sonnentag-Team.")
     readln()
 
     println("Das zweite Team besteht aus:")
     teamGlurak()
-    println("Es ist ein Regentanz-Team.")
     readln()
 
     println("Das dritte Team besteht aus:")
     teamBisaflor()
-    println("Es ist ebenfalls ein Sonnentag-Team.")
 
     return ""
 }

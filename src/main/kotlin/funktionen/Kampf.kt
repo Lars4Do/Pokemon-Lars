@@ -28,17 +28,21 @@ fun kampf() {
     println("Naja, machen wir weiter.")
     Thread.sleep(1000)
     println("Das sind die 3 Teams aus denen Ihr eines wählen könnt.")
-    Thread.sleep(1000)
+    readln()
     println(teamInformation())
     println("Nun wählt der Reihe nach ein Team aus.")
     Thread.sleep(1000)
     spieler1.team = teamAuswahlSpieler(spieler1)
-    Thread.sleep(500)
+    Thread.sleep(1000)
+    println()
     spieler2.team = teamAuswahlSpieler(spieler2)
+    Thread.sleep(1000)
     var pokemon1 = pokemonAuswahl(spieler1)
+    Thread.sleep(1000)
+    println()
     var pokemon2 = pokemonAuswahl(spieler2)
 
-    println(pokemon2.kp)
+
     while (pokemon1.kp > 0 && pokemon2.kp > 0) {
 
         val auswahlPlayer1 = attackenAuswahl(pokemon1)
@@ -46,6 +50,7 @@ fun kampf() {
 
         if (pokemon1.initiative > pokemon2.initiative) {
             pokemon2.kp -= schadensBerechnung(pokemon1, pokemon2, auswahlPlayer1).toInt()
+            println()
             if (pokemon2.kp > 0) {
                 pokemon1.kp -= schadensBerechnung(pokemon2, pokemon1, auswahlPlayer2).toInt()
                 if (pokemon1.kp <= 0) {
@@ -70,6 +75,7 @@ fun kampf() {
             }
         } else {
             pokemon1.kp -= schadensBerechnung(pokemon2, pokemon1, auswahlPlayer2).toInt()
+            println()
             if (pokemon1.kp > 0) {
                 pokemon2.kp -= schadensBerechnung(pokemon1, pokemon2, auswahlPlayer1).toInt()
                 if (pokemon2.kp <= 0) {
