@@ -95,14 +95,14 @@ fun teamAuswahlSpieler(spieler: Player):MutableList<Pokemon> {
 
     var pokemonListe: MutableList<Pokemon> = mutableListOf()
 
-    val input = readln().toInt()
+    val input = readln()
 
     println("${spieler.name}, dein Team besteht aus")
 
     when (input) {
-        1 -> pokemonListe = teamTurtok()
-        2 -> pokemonListe = teamGlurak()
-        3 -> pokemonListe = teamBisaflor()
+        "1" -> pokemonListe = teamTurtok()
+        "2" -> pokemonListe = teamGlurak()
+        "3" -> pokemonListe = teamBisaflor()
         else -> {println("Ungültige Eingabe, versuche es noch einmal.")
             teamAuswahlSpieler(spieler)
         }
@@ -164,14 +164,14 @@ fun attackenAuswahl(pokemon: Pokemon):PokemonAttacke{
         println(" für $attacke")
         zahl++
     }
-    val input = readln().toInt()
+    val input = readln()
     val attacke: PokemonAttacke
 
     when(input){
-        1 -> attacke = pokemon.attacke[0]
-        2 -> attacke = pokemon.attacke[1]
-        3 -> attacke = pokemon.attacke[2]
-        4 -> attacke = pokemon.attacke[3]
+        "1" -> attacke = pokemon.attacke[0]
+        "2" -> attacke = pokemon.attacke[1]
+        "3" -> attacke = pokemon.attacke[2]
+        "4" -> attacke = pokemon.attacke[3]
         else ->{ println("ungültig")
             attacke = attackenAuswahl(pokemon)
         }
